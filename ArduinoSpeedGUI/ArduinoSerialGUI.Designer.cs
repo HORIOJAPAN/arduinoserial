@@ -28,118 +28,135 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.COM = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.trackBar3 = new System.Windows.Forms.TrackBar();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.data1_trkbar = new System.Windows.Forms.TrackBar();
+            this.data1_txtbox = new System.Windows.Forms.TextBox();
+            this.data2_txtbox = new System.Windows.Forms.TextBox();
+            this.mode_cbbox = new System.Windows.Forms.ComboBox();
+            this.data3_txtbox = new System.Windows.Forms.TextBox();
+            this.code_txtbox = new System.Windows.Forms.TextBox();
+            this.stop_btn = new System.Windows.Forms.Button();
+            this.receive_txtbox = new System.Windows.Forms.TextBox();
+            this.com_cbbox = new System.Windows.Forms.ComboBox();
+            this.speed_cbbox = new System.Windows.Forms.ComboBox();
+            this.com_lbl = new System.Windows.Forms.Label();
+            this.speed_lbl = new System.Windows.Forms.Label();
+            this.mode_lbl = new System.Windows.Forms.Label();
+            this.data1_lbl = new System.Windows.Forms.Label();
+            this.data2_lbl = new System.Windows.Forms.Label();
+            this.data3_lbl = new System.Windows.Forms.Label();
+            this.send_btn = new System.Windows.Forms.Button();
+            this.connect_btn = new System.Windows.Forms.Button();
+            this.code_lbl = new System.Windows.Forms.Label();
+            this.data2_trkbar = new System.Windows.Forms.TrackBar();
+            this.data3_trkbar = new System.Windows.Forms.TrackBar();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.data1_trkbar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data2_trkbar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data3_trkbar)).BeginInit();
             this.SuspendLayout();
             // 
-            // trackBar1
+            // data1_trkbar
             // 
-            this.trackBar1.LargeChange = 1;
-            this.trackBar1.Location = new System.Drawing.Point(200, 222);
-            this.trackBar1.Maximum = 2000;
-            this.trackBar1.Minimum = -2000;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(284, 69);
-            this.trackBar1.TabIndex = 0;
+            this.data1_trkbar.LargeChange = 1;
+            this.data1_trkbar.Location = new System.Drawing.Point(120, 148);
+            this.data1_trkbar.Margin = new System.Windows.Forms.Padding(2);
+            this.data1_trkbar.Maximum = 2000;
+            this.data1_trkbar.Minimum = -2000;
+            this.data1_trkbar.Name = "data1_trkbar";
+            this.data1_trkbar.Size = new System.Drawing.Size(170, 45);
+            this.data1_trkbar.TabIndex = 0;
+            this.data1_trkbar.Scroll += new System.EventHandler(this.data1_trkbar_Scroll);
             // 
-            // textBox1
+            // data1_txtbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(49, 222);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 1;
+            this.data1_txtbox.Location = new System.Drawing.Point(29, 148);
+            this.data1_txtbox.Margin = new System.Windows.Forms.Padding(2);
+            this.data1_txtbox.Name = "data1_txtbox";
+            this.data1_txtbox.Size = new System.Drawing.Size(62, 19);
+            this.data1_txtbox.TabIndex = 1;
             // 
-            // textBox2
+            // data2_txtbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(49, 288);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 25);
-            this.textBox2.TabIndex = 3;
+            this.data2_txtbox.Location = new System.Drawing.Point(29, 192);
+            this.data2_txtbox.Margin = new System.Windows.Forms.Padding(2);
+            this.data2_txtbox.Name = "data2_txtbox";
+            this.data2_txtbox.Size = new System.Drawing.Size(62, 19);
+            this.data2_txtbox.TabIndex = 3;
             // 
-            // comboBox1
+            // mode_cbbox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.mode_cbbox.FormattingEnabled = true;
+            this.mode_cbbox.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.comboBox1.Location = new System.Drawing.Point(49, 147);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 26);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.Text = "1";
+            this.mode_cbbox.Location = new System.Drawing.Point(29, 98);
+            this.mode_cbbox.Margin = new System.Windows.Forms.Padding(2);
+            this.mode_cbbox.Name = "mode_cbbox";
+            this.mode_cbbox.Size = new System.Drawing.Size(62, 20);
+            this.mode_cbbox.TabIndex = 4;
+            this.mode_cbbox.Text = "1";
+            this.mode_cbbox.SelectedIndexChanged += new System.EventHandler(this.mode_cbbox_SelectedIndexChanged);
             // 
-            // textBox3
+            // data3_txtbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(49, 359);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 25);
-            this.textBox3.TabIndex = 6;
+            this.data3_txtbox.Location = new System.Drawing.Point(29, 239);
+            this.data3_txtbox.Margin = new System.Windows.Forms.Padding(2);
+            this.data3_txtbox.Name = "data3_txtbox";
+            this.data3_txtbox.Size = new System.Drawing.Size(62, 19);
+            this.data3_txtbox.TabIndex = 6;
             // 
-            // textBox4
+            // code_txtbox
             // 
-            this.textBox4.Location = new System.Drawing.Point(49, 438);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(165, 25);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.Text = "0000000000000000";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.code_txtbox.Location = new System.Drawing.Point(29, 292);
+            this.code_txtbox.Margin = new System.Windows.Forms.Padding(2);
+            this.code_txtbox.Name = "code_txtbox";
+            this.code_txtbox.Size = new System.Drawing.Size(125, 19);
+            this.code_txtbox.TabIndex = 7;
+            this.code_txtbox.Text = "1000000000000000";
+            this.code_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
+            // stop_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("ＭＳ ゴシック", 20F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.stop_btn.BackColor = System.Drawing.Color.Red;
+            this.stop_btn.Font = new System.Drawing.Font("ＭＳ ゴシック", 20F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(305, 498);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(241, 113);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Stop";
-            this.button1.UseVisualStyleBackColor = false;
+            this.stop_btn.Location = new System.Drawing.Point(183, 332);
+            this.stop_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.stop_btn.Name = "stop_btn";
+            this.stop_btn.Size = new System.Drawing.Size(145, 75);
+            this.stop_btn.TabIndex = 8;
+            this.stop_btn.Text = "Stop";
+            this.stop_btn.UseVisualStyleBackColor = false;
+            this.stop_btn.Click += new System.EventHandler(this.stop_btn_Click);
             // 
-            // textBox5
+            // receive_txtbox
             // 
-            this.textBox5.Location = new System.Drawing.Point(590, 30);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox5.Size = new System.Drawing.Size(390, 591);
-            this.textBox5.TabIndex = 9;
+            this.receive_txtbox.BackColor = System.Drawing.Color.Black;
+            this.receive_txtbox.ForeColor = System.Drawing.Color.Lime;
+            this.receive_txtbox.Location = new System.Drawing.Point(354, 20);
+            this.receive_txtbox.Margin = new System.Windows.Forms.Padding(2);
+            this.receive_txtbox.Multiline = true;
+            this.receive_txtbox.Name = "receive_txtbox";
+            this.receive_txtbox.ReadOnly = true;
+            this.receive_txtbox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.receive_txtbox.Size = new System.Drawing.Size(236, 395);
+            this.receive_txtbox.TabIndex = 9;
             // 
-            // comboBox2
+            // com_cbbox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(49, 54);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 26);
-            this.comboBox2.TabIndex = 10;
-            this.comboBox2.Text = "4";
+            this.com_cbbox.FormattingEnabled = true;
+            this.com_cbbox.Location = new System.Drawing.Point(29, 36);
+            this.com_cbbox.Margin = new System.Windows.Forms.Padding(2);
+            this.com_cbbox.Name = "com_cbbox";
+            this.com_cbbox.Size = new System.Drawing.Size(74, 20);
+            this.com_cbbox.TabIndex = 10;
+            this.com_cbbox.Text = "4";
             // 
-            // comboBox3
+            // speed_cbbox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.speed_cbbox.FormattingEnabled = true;
+            this.speed_cbbox.Items.AddRange(new object[] {
             "300",
             "600",
             "1200",
@@ -152,143 +169,166 @@
             "38400",
             "57600",
             "115200"});
-            this.comboBox3.Location = new System.Drawing.Point(200, 54);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 26);
-            this.comboBox3.TabIndex = 11;
-            this.comboBox3.Text = "9600";
+            this.speed_cbbox.Location = new System.Drawing.Point(120, 36);
+            this.speed_cbbox.Margin = new System.Windows.Forms.Padding(2);
+            this.speed_cbbox.Name = "speed_cbbox";
+            this.speed_cbbox.Size = new System.Drawing.Size(74, 20);
+            this.speed_cbbox.TabIndex = 11;
+            this.speed_cbbox.Text = "9600";
             // 
-            // COM
+            // com_lbl
             // 
-            this.COM.AutoSize = true;
-            this.COM.Location = new System.Drawing.Point(49, 30);
-            this.COM.Name = "COM";
-            this.COM.Size = new System.Drawing.Size(46, 18);
-            this.COM.TabIndex = 12;
-            this.COM.Text = "COM";
+            this.com_lbl.AutoSize = true;
+            this.com_lbl.Location = new System.Drawing.Point(29, 20);
+            this.com_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.com_lbl.Name = "com_lbl";
+            this.com_lbl.Size = new System.Drawing.Size(30, 12);
+            this.com_lbl.TabIndex = 12;
+            this.com_lbl.Text = "COM";
             // 
-            // label2
+            // speed_lbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(197, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 18);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Speed";
+            this.speed_lbl.AutoSize = true;
+            this.speed_lbl.Location = new System.Drawing.Point(118, 20);
+            this.speed_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.speed_lbl.Name = "speed_lbl";
+            this.speed_lbl.Size = new System.Drawing.Size(36, 12);
+            this.speed_lbl.TabIndex = 13;
+            this.speed_lbl.Text = "Speed";
             // 
-            // label3
+            // mode_lbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 18);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "mode";
+            this.mode_lbl.AutoSize = true;
+            this.mode_lbl.Location = new System.Drawing.Point(29, 84);
+            this.mode_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.mode_lbl.Name = "mode_lbl";
+            this.mode_lbl.Size = new System.Drawing.Size(32, 12);
+            this.mode_lbl.TabIndex = 14;
+            this.mode_lbl.Text = "mode";
             // 
-            // label4
+            // data1_lbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 201);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 18);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "data1";
+            this.data1_lbl.AutoSize = true;
+            this.data1_lbl.Location = new System.Drawing.Point(29, 134);
+            this.data1_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.data1_lbl.Name = "data1_lbl";
+            this.data1_lbl.Size = new System.Drawing.Size(33, 12);
+            this.data1_lbl.TabIndex = 15;
+            this.data1_lbl.Text = "data1";
             // 
-            // label5
+            // data2_lbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 267);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 18);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "data2";
+            this.data2_lbl.AutoSize = true;
+            this.data2_lbl.Location = new System.Drawing.Point(29, 178);
+            this.data2_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.data2_lbl.Name = "data2_lbl";
+            this.data2_lbl.Size = new System.Drawing.Size(33, 12);
+            this.data2_lbl.TabIndex = 16;
+            this.data2_lbl.Text = "data2";
             // 
-            // label6
+            // data3_lbl
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(49, 339);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 18);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "data3";
+            this.data3_lbl.AutoSize = true;
+            this.data3_lbl.Location = new System.Drawing.Point(29, 226);
+            this.data3_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.data3_lbl.Name = "data3_lbl";
+            this.data3_lbl.Size = new System.Drawing.Size(33, 12);
+            this.data3_lbl.TabIndex = 17;
+            this.data3_lbl.Text = "data3";
             // 
-            // button2
+            // send_btn
             // 
-            this.button2.Location = new System.Drawing.Point(46, 498);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(238, 113);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Send";
-            this.button2.UseVisualStyleBackColor = true;
+            this.send_btn.Location = new System.Drawing.Point(28, 332);
+            this.send_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.send_btn.Name = "send_btn";
+            this.send_btn.Size = new System.Drawing.Size(143, 75);
+            this.send_btn.TabIndex = 18;
+            this.send_btn.Text = "Send";
+            this.send_btn.UseVisualStyleBackColor = true;
+            this.send_btn.Click += new System.EventHandler(this.send_btn_Click);
             // 
-            // button3
+            // connect_btn
             // 
-            this.button3.Location = new System.Drawing.Point(371, 44);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 44);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Connect";
-            this.button3.UseVisualStyleBackColor = true;
+            this.connect_btn.Location = new System.Drawing.Point(223, 29);
+            this.connect_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.connect_btn.Name = "connect_btn";
+            this.connect_btn.Size = new System.Drawing.Size(93, 29);
+            this.connect_btn.TabIndex = 19;
+            this.connect_btn.Text = "Connect";
+            this.connect_btn.UseVisualStyleBackColor = true;
+            this.connect_btn.Click += new System.EventHandler(this.connect_btn_Click);
             // 
-            // label7
+            // code_lbl
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(49, 417);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 18);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "code";
+            this.code_lbl.AutoSize = true;
+            this.code_lbl.Location = new System.Drawing.Point(29, 278);
+            this.code_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.code_lbl.Name = "code_lbl";
+            this.code_lbl.Size = new System.Drawing.Size(29, 12);
+            this.code_lbl.TabIndex = 20;
+            this.code_lbl.Text = "code";
             // 
-            // trackBar2
+            // data2_trkbar
             // 
-            this.trackBar2.LargeChange = 1;
-            this.trackBar2.Location = new System.Drawing.Point(200, 288);
-            this.trackBar2.Maximum = 2000;
-            this.trackBar2.Minimum = -2000;
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(284, 69);
-            this.trackBar2.TabIndex = 21;
+            this.data2_trkbar.LargeChange = 1;
+            this.data2_trkbar.Location = new System.Drawing.Point(120, 192);
+            this.data2_trkbar.Margin = new System.Windows.Forms.Padding(2);
+            this.data2_trkbar.Maximum = 2000;
+            this.data2_trkbar.Minimum = -2000;
+            this.data2_trkbar.Name = "data2_trkbar";
+            this.data2_trkbar.Size = new System.Drawing.Size(170, 45);
+            this.data2_trkbar.TabIndex = 21;
+            this.data2_trkbar.Scroll += new System.EventHandler(this.data2_trkbar_Scroll);
             // 
-            // trackBar3
+            // data3_trkbar
             // 
-            this.trackBar3.LargeChange = 1;
-            this.trackBar3.Location = new System.Drawing.Point(200, 359);
-            this.trackBar3.Maximum = 9999;
-            this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Size = new System.Drawing.Size(284, 69);
-            this.trackBar3.TabIndex = 22;
+            this.data3_trkbar.LargeChange = 1;
+            this.data3_trkbar.Location = new System.Drawing.Point(120, 239);
+            this.data3_trkbar.Margin = new System.Windows.Forms.Padding(2);
+            this.data3_trkbar.Maximum = 9999;
+            this.data3_trkbar.Name = "data3_trkbar";
+            this.data3_trkbar.Size = new System.Drawing.Size(170, 45);
+            this.data3_trkbar.TabIndex = 22;
+            this.data3_trkbar.Scroll += new System.EventHandler(this.data3_trkbar_Scroll);
+            // 
+            // serialPort1
+            // 
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
             // ArduinoSerialGUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 633);
-            this.Controls.Add(this.trackBar3);
-            this.Controls.Add(this.trackBar2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.COM);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.trackBar1);
+            this.ClientSize = new System.Drawing.Size(595, 422);
+            this.Controls.Add(this.data3_trkbar);
+            this.Controls.Add(this.data2_trkbar);
+            this.Controls.Add(this.code_lbl);
+            this.Controls.Add(this.connect_btn);
+            this.Controls.Add(this.send_btn);
+            this.Controls.Add(this.data3_lbl);
+            this.Controls.Add(this.data2_lbl);
+            this.Controls.Add(this.data1_lbl);
+            this.Controls.Add(this.mode_lbl);
+            this.Controls.Add(this.speed_lbl);
+            this.Controls.Add(this.com_lbl);
+            this.Controls.Add(this.speed_cbbox);
+            this.Controls.Add(this.com_cbbox);
+            this.Controls.Add(this.receive_txtbox);
+            this.Controls.Add(this.stop_btn);
+            this.Controls.Add(this.code_txtbox);
+            this.Controls.Add(this.data3_txtbox);
+            this.Controls.Add(this.mode_cbbox);
+            this.Controls.Add(this.data2_txtbox);
+            this.Controls.Add(this.data1_txtbox);
+            this.Controls.Add(this.data1_trkbar);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ArduinoSerialGUI";
             this.Text = "Arduino";
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ArduinoSerialGUI_FormClosed);
+            this.Load += new System.EventHandler(this.ArduinoSerialGUI_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.data1_trkbar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data2_trkbar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data3_trkbar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,27 +336,28 @@
 
         #endregion
 
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label COM;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TrackBar trackBar2;
-        private System.Windows.Forms.TrackBar trackBar3;
+        private System.Windows.Forms.TrackBar data1_trkbar;
+        private System.Windows.Forms.TextBox data1_txtbox;
+        private System.Windows.Forms.TextBox data2_txtbox;
+        private System.Windows.Forms.ComboBox mode_cbbox;
+        private System.Windows.Forms.TextBox data3_txtbox;
+        private System.Windows.Forms.TextBox code_txtbox;
+        private System.Windows.Forms.Button stop_btn;
+        private System.Windows.Forms.TextBox receive_txtbox;
+        private System.Windows.Forms.ComboBox com_cbbox;
+        private System.Windows.Forms.ComboBox speed_cbbox;
+        private System.Windows.Forms.Label com_lbl;
+        private System.Windows.Forms.Label speed_lbl;
+        private System.Windows.Forms.Label mode_lbl;
+        private System.Windows.Forms.Label data1_lbl;
+        private System.Windows.Forms.Label data2_lbl;
+        private System.Windows.Forms.Label data3_lbl;
+        private System.Windows.Forms.Button send_btn;
+        private System.Windows.Forms.Button connect_btn;
+        private System.Windows.Forms.Label code_lbl;
+        private System.Windows.Forms.TrackBar data2_trkbar;
+        private System.Windows.Forms.TrackBar data3_trkbar;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }
 
