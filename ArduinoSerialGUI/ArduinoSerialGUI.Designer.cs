@@ -1,4 +1,4 @@
-﻿namespace ArduinoSpeedGUI
+﻿namespace ArduinoSerialGUI
 {
     partial class ArduinoSerialGUI
     {
