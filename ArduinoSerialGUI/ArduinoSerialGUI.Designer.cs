@@ -59,29 +59,26 @@
             // data1_trkbar
             // 
             this.data1_trkbar.LargeChange = 1;
-            this.data1_trkbar.Location = new System.Drawing.Point(120, 148);
-            this.data1_trkbar.Margin = new System.Windows.Forms.Padding(2);
+            this.data1_trkbar.Location = new System.Drawing.Point(200, 222);
             this.data1_trkbar.Maximum = 2000;
             this.data1_trkbar.Minimum = -2000;
             this.data1_trkbar.Name = "data1_trkbar";
-            this.data1_trkbar.Size = new System.Drawing.Size(170, 45);
+            this.data1_trkbar.Size = new System.Drawing.Size(283, 69);
             this.data1_trkbar.TabIndex = 0;
             this.data1_trkbar.Scroll += new System.EventHandler(this.data1_trkbar_Scroll);
             // 
             // data1_txtbox
             // 
-            this.data1_txtbox.Location = new System.Drawing.Point(29, 148);
-            this.data1_txtbox.Margin = new System.Windows.Forms.Padding(2);
+            this.data1_txtbox.Location = new System.Drawing.Point(48, 222);
             this.data1_txtbox.Name = "data1_txtbox";
-            this.data1_txtbox.Size = new System.Drawing.Size(62, 19);
+            this.data1_txtbox.Size = new System.Drawing.Size(101, 25);
             this.data1_txtbox.TabIndex = 1;
             // 
             // data2_txtbox
             // 
-            this.data2_txtbox.Location = new System.Drawing.Point(29, 192);
-            this.data2_txtbox.Margin = new System.Windows.Forms.Padding(2);
+            this.data2_txtbox.Location = new System.Drawing.Point(48, 288);
             this.data2_txtbox.Name = "data2_txtbox";
-            this.data2_txtbox.Size = new System.Drawing.Size(62, 19);
+            this.data2_txtbox.Size = new System.Drawing.Size(101, 25);
             this.data2_txtbox.TabIndex = 3;
             // 
             // mode_cbbox
@@ -90,28 +87,25 @@
             this.mode_cbbox.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.mode_cbbox.Location = new System.Drawing.Point(29, 98);
-            this.mode_cbbox.Margin = new System.Windows.Forms.Padding(2);
+            this.mode_cbbox.Location = new System.Drawing.Point(48, 147);
             this.mode_cbbox.Name = "mode_cbbox";
-            this.mode_cbbox.Size = new System.Drawing.Size(62, 20);
+            this.mode_cbbox.Size = new System.Drawing.Size(101, 26);
             this.mode_cbbox.TabIndex = 4;
             this.mode_cbbox.Text = "1";
             this.mode_cbbox.SelectedIndexChanged += new System.EventHandler(this.mode_cbbox_SelectedIndexChanged);
             // 
             // data3_txtbox
             // 
-            this.data3_txtbox.Location = new System.Drawing.Point(29, 239);
-            this.data3_txtbox.Margin = new System.Windows.Forms.Padding(2);
+            this.data3_txtbox.Location = new System.Drawing.Point(48, 358);
             this.data3_txtbox.Name = "data3_txtbox";
-            this.data3_txtbox.Size = new System.Drawing.Size(62, 19);
+            this.data3_txtbox.Size = new System.Drawing.Size(101, 25);
             this.data3_txtbox.TabIndex = 6;
             // 
             // code_txtbox
             // 
-            this.code_txtbox.Location = new System.Drawing.Point(29, 292);
-            this.code_txtbox.Margin = new System.Windows.Forms.Padding(2);
+            this.code_txtbox.Location = new System.Drawing.Point(48, 438);
             this.code_txtbox.Name = "code_txtbox";
-            this.code_txtbox.Size = new System.Drawing.Size(125, 19);
+            this.code_txtbox.Size = new System.Drawing.Size(206, 25);
             this.code_txtbox.TabIndex = 7;
             this.code_txtbox.Text = "1000000000000000";
             this.code_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -121,10 +115,9 @@
             this.stop_btn.BackColor = System.Drawing.Color.Red;
             this.stop_btn.Font = new System.Drawing.Font("ＭＳ ゴシック", 20F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.stop_btn.Location = new System.Drawing.Point(183, 332);
-            this.stop_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.stop_btn.Location = new System.Drawing.Point(305, 498);
             this.stop_btn.Name = "stop_btn";
-            this.stop_btn.Size = new System.Drawing.Size(145, 75);
+            this.stop_btn.Size = new System.Drawing.Size(242, 112);
             this.stop_btn.TabIndex = 8;
             this.stop_btn.Text = "Stop";
             this.stop_btn.UseVisualStyleBackColor = false;
@@ -134,114 +127,88 @@
             // 
             this.receive_txtbox.BackColor = System.Drawing.Color.Black;
             this.receive_txtbox.ForeColor = System.Drawing.Color.Lime;
-            this.receive_txtbox.Location = new System.Drawing.Point(354, 20);
-            this.receive_txtbox.Margin = new System.Windows.Forms.Padding(2);
+            this.receive_txtbox.Location = new System.Drawing.Point(590, 30);
             this.receive_txtbox.Multiline = true;
             this.receive_txtbox.Name = "receive_txtbox";
-            this.receive_txtbox.ReadOnly = true;
             this.receive_txtbox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.receive_txtbox.Size = new System.Drawing.Size(236, 395);
+            this.receive_txtbox.Size = new System.Drawing.Size(391, 590);
             this.receive_txtbox.TabIndex = 9;
             // 
             // com_cbbox
             // 
             this.com_cbbox.FormattingEnabled = true;
-            this.com_cbbox.Location = new System.Drawing.Point(29, 36);
-            this.com_cbbox.Margin = new System.Windows.Forms.Padding(2);
+            this.com_cbbox.Location = new System.Drawing.Point(48, 54);
             this.com_cbbox.Name = "com_cbbox";
-            this.com_cbbox.Size = new System.Drawing.Size(74, 20);
+            this.com_cbbox.Size = new System.Drawing.Size(121, 26);
             this.com_cbbox.TabIndex = 10;
-            this.com_cbbox.Text = "4";
             // 
             // speed_cbbox
             // 
             this.speed_cbbox.FormattingEnabled = true;
-            this.speed_cbbox.Items.AddRange(new object[] {
-            "300",
-            "600",
-            "1200",
-            "2400",
-            "4800",
-            "9600",
-            "14400",
-            "19200",
-            "28800",
-            "38400",
-            "57600",
-            "115200"});
-            this.speed_cbbox.Location = new System.Drawing.Point(120, 36);
-            this.speed_cbbox.Margin = new System.Windows.Forms.Padding(2);
+            this.speed_cbbox.Location = new System.Drawing.Point(200, 54);
             this.speed_cbbox.Name = "speed_cbbox";
-            this.speed_cbbox.Size = new System.Drawing.Size(74, 20);
+            this.speed_cbbox.Size = new System.Drawing.Size(121, 26);
             this.speed_cbbox.TabIndex = 11;
-            this.speed_cbbox.Text = "9600";
             // 
             // com_lbl
             // 
             this.com_lbl.AutoSize = true;
-            this.com_lbl.Location = new System.Drawing.Point(29, 20);
-            this.com_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.com_lbl.Location = new System.Drawing.Point(48, 30);
             this.com_lbl.Name = "com_lbl";
-            this.com_lbl.Size = new System.Drawing.Size(30, 12);
+            this.com_lbl.Size = new System.Drawing.Size(46, 18);
             this.com_lbl.TabIndex = 12;
             this.com_lbl.Text = "COM";
             // 
             // speed_lbl
             // 
             this.speed_lbl.AutoSize = true;
-            this.speed_lbl.Location = new System.Drawing.Point(118, 20);
-            this.speed_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.speed_lbl.Location = new System.Drawing.Point(197, 30);
             this.speed_lbl.Name = "speed_lbl";
-            this.speed_lbl.Size = new System.Drawing.Size(36, 12);
+            this.speed_lbl.Size = new System.Drawing.Size(55, 18);
             this.speed_lbl.TabIndex = 13;
             this.speed_lbl.Text = "Speed";
             // 
             // mode_lbl
             // 
             this.mode_lbl.AutoSize = true;
-            this.mode_lbl.Location = new System.Drawing.Point(29, 84);
-            this.mode_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.mode_lbl.Location = new System.Drawing.Point(48, 126);
             this.mode_lbl.Name = "mode_lbl";
-            this.mode_lbl.Size = new System.Drawing.Size(32, 12);
+            this.mode_lbl.Size = new System.Drawing.Size(48, 18);
             this.mode_lbl.TabIndex = 14;
             this.mode_lbl.Text = "mode";
             // 
             // data1_lbl
             // 
             this.data1_lbl.AutoSize = true;
-            this.data1_lbl.Location = new System.Drawing.Point(29, 134);
-            this.data1_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.data1_lbl.Location = new System.Drawing.Point(48, 201);
             this.data1_lbl.Name = "data1_lbl";
-            this.data1_lbl.Size = new System.Drawing.Size(33, 12);
+            this.data1_lbl.Size = new System.Drawing.Size(50, 18);
             this.data1_lbl.TabIndex = 15;
             this.data1_lbl.Text = "data1";
             // 
             // data2_lbl
             // 
             this.data2_lbl.AutoSize = true;
-            this.data2_lbl.Location = new System.Drawing.Point(29, 178);
-            this.data2_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.data2_lbl.Location = new System.Drawing.Point(48, 267);
             this.data2_lbl.Name = "data2_lbl";
-            this.data2_lbl.Size = new System.Drawing.Size(33, 12);
+            this.data2_lbl.Size = new System.Drawing.Size(50, 18);
             this.data2_lbl.TabIndex = 16;
             this.data2_lbl.Text = "data2";
             // 
             // data3_lbl
             // 
             this.data3_lbl.AutoSize = true;
-            this.data3_lbl.Location = new System.Drawing.Point(29, 226);
-            this.data3_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.data3_lbl.Location = new System.Drawing.Point(48, 339);
             this.data3_lbl.Name = "data3_lbl";
-            this.data3_lbl.Size = new System.Drawing.Size(33, 12);
+            this.data3_lbl.Size = new System.Drawing.Size(50, 18);
             this.data3_lbl.TabIndex = 17;
             this.data3_lbl.Text = "data3";
             // 
             // send_btn
             // 
-            this.send_btn.Location = new System.Drawing.Point(28, 332);
-            this.send_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.send_btn.Location = new System.Drawing.Point(47, 498);
             this.send_btn.Name = "send_btn";
-            this.send_btn.Size = new System.Drawing.Size(143, 75);
+            this.send_btn.Size = new System.Drawing.Size(238, 112);
             this.send_btn.TabIndex = 18;
             this.send_btn.Text = "Send";
             this.send_btn.UseVisualStyleBackColor = true;
@@ -249,10 +216,9 @@
             // 
             // connect_btn
             // 
-            this.connect_btn.Location = new System.Drawing.Point(223, 29);
-            this.connect_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.connect_btn.Location = new System.Drawing.Point(372, 44);
             this.connect_btn.Name = "connect_btn";
-            this.connect_btn.Size = new System.Drawing.Size(93, 29);
+            this.connect_btn.Size = new System.Drawing.Size(155, 44);
             this.connect_btn.TabIndex = 19;
             this.connect_btn.Text = "Connect";
             this.connect_btn.UseVisualStyleBackColor = true;
@@ -261,33 +227,30 @@
             // code_lbl
             // 
             this.code_lbl.AutoSize = true;
-            this.code_lbl.Location = new System.Drawing.Point(29, 278);
-            this.code_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.code_lbl.Location = new System.Drawing.Point(48, 417);
             this.code_lbl.Name = "code_lbl";
-            this.code_lbl.Size = new System.Drawing.Size(29, 12);
+            this.code_lbl.Size = new System.Drawing.Size(44, 18);
             this.code_lbl.TabIndex = 20;
             this.code_lbl.Text = "code";
             // 
             // data2_trkbar
             // 
             this.data2_trkbar.LargeChange = 1;
-            this.data2_trkbar.Location = new System.Drawing.Point(120, 192);
-            this.data2_trkbar.Margin = new System.Windows.Forms.Padding(2);
+            this.data2_trkbar.Location = new System.Drawing.Point(200, 288);
             this.data2_trkbar.Maximum = 2000;
             this.data2_trkbar.Minimum = -2000;
             this.data2_trkbar.Name = "data2_trkbar";
-            this.data2_trkbar.Size = new System.Drawing.Size(170, 45);
+            this.data2_trkbar.Size = new System.Drawing.Size(283, 69);
             this.data2_trkbar.TabIndex = 21;
             this.data2_trkbar.Scroll += new System.EventHandler(this.data2_trkbar_Scroll);
             // 
             // data3_trkbar
             // 
             this.data3_trkbar.LargeChange = 1;
-            this.data3_trkbar.Location = new System.Drawing.Point(120, 239);
-            this.data3_trkbar.Margin = new System.Windows.Forms.Padding(2);
+            this.data3_trkbar.Location = new System.Drawing.Point(200, 358);
             this.data3_trkbar.Maximum = 9999;
             this.data3_trkbar.Name = "data3_trkbar";
-            this.data3_trkbar.Size = new System.Drawing.Size(170, 45);
+            this.data3_trkbar.Size = new System.Drawing.Size(283, 69);
             this.data3_trkbar.TabIndex = 22;
             this.data3_trkbar.Scroll += new System.EventHandler(this.data3_trkbar_Scroll);
             // 
@@ -297,9 +260,9 @@
             // 
             // ArduinoSerialGUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 422);
+            this.ClientSize = new System.Drawing.Size(992, 633);
             this.Controls.Add(this.data3_trkbar);
             this.Controls.Add(this.data2_trkbar);
             this.Controls.Add(this.code_lbl);
@@ -321,7 +284,6 @@
             this.Controls.Add(this.data2_txtbox);
             this.Controls.Add(this.data1_txtbox);
             this.Controls.Add(this.data1_trkbar);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ArduinoSerialGUI";
             this.Text = "Arduino";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ArduinoSerialGUI_FormClosed);

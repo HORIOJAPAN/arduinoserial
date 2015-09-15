@@ -43,7 +43,7 @@ namespace ArduinoSerialGUI
             }
         }
 
-        private delegate void Delegate_RcvDataToTextBox(string data);
+        private delegate void Delegate_receiveDataToTextBox(string data);
 
 
         public ArduinoSerialGUI()
@@ -107,42 +107,44 @@ namespace ArduinoSerialGUI
         {
             if (serialPort1.IsOpen == true)
             {
-                //! シリアルポートをクローズする.
+                // シリアルポートをクローズする.
                 serialPort1.Close();
 
-                //! ボタンの表示を[切断]から[接続]に変える.
+                // ボタンの表示を[切断]から[接続]に変える.
                 connect_btn.Text = "Connect";
             }
             else
             {
-                //! オープンするシリアルポートをコンボボックスから取り出す.
+                // オープンするシリアルポートをコンボボックスから取り出す.
                 serialPort1.PortName = com_cbbox.SelectedItem.ToString();
 
-                //! ボーレートをコンボボックスから取り出す.
+                // ボーレートをコンボボックスから取り出す.
                 myDataset baud = (myDataset)speed_cbbox.SelectedItem;
                 serialPort1.BaudRate = baud.VALUE;
 
-                //! データビットをセットする. (データビット = 8ビット)
+                // データビットをセットする. (データビット = 8ビット)
                 serialPort1.DataBits = 8;
 
-                //! パリティビットをセットする. (パリティビット = なし)
+                // パリティビットをセットする. (パリティビット = なし)
                 serialPort1.Parity = Parity.None;
 
-                //! ストップビットをセットする. (ストップビット = 1ビット)
+                // ストップビットをセットする. (ストップビット = 1ビット)
                 serialPort1.StopBits = StopBits.One;
 
-                //! フロー制御をコンボボックスから取り出す.
+                // フロー制御をセットする.
                 serialPort1.Handshake = Handshake.None;
 
-                //! 文字コードをセットする.
-                serialPort1.Encoding = Encoding.Unicode;
+                // 文字コードをセットする.
+                //serialPort1.Encoding = Encoding.Default;
+
+                serialPort1.ReceivedBytesThreshold = 1;
 
                 try
                 {
-                    //! シリアルポートをオープンする.
+                    // シリアルポートをオープンする.
                     serialPort1.Open();
 
-                    //! ボタンの表示を[接続]から[切断]に変える.
+                    // ボタンの表示を[接続]から[切断]に変える.
                     connect_btn.Text = "Disconnect";
                 }
                 catch (Exception ex)
@@ -161,6 +163,7 @@ namespace ArduinoSerialGUI
             }
             // テキストボックスから、送信するテキストを取り出す.
             String data = "j" + code_txtbox.Text + "x";
+            
 
             // 送信するテキストがない場合、データ送信は行わない.
             if (string.IsNullOrEmpty(data) == true)
@@ -184,7 +187,7 @@ namespace ArduinoSerialGUI
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            //! シリアルポートをオープンしていない場合、処理を行わない.
+            // シリアルポートをオープンしていない場合、処理を行わない.
             if (serialPort1.IsOpen == false)
             {
                 return;
@@ -192,11 +195,11 @@ namespace ArduinoSerialGUI
 
             try
             {
-                //! 受信データを読み込む.
+                // 受信データを読み込む.
                 string data = serialPort1.ReadExisting();
 
-                //! 受信したデータをテキストボックスに書き込む.
-                Invoke(new Delegate_RcvDataToTextBox(receiveDataToTextBox), new Object[] { data });
+                // 受信したデータをテキストボックスに書き込む.
+                Invoke(new Delegate_receiveDataToTextBox(receiveDataToTextBox), new Object[] { data });
             }
             catch (Exception ex)
             {
@@ -206,10 +209,15 @@ namespace ArduinoSerialGUI
 
         private void receiveDataToTextBox(string data)
         {
-            //! 受信データをテキストボックスの最後に追記する.
+            // 受信データをテキストボックスの最後に追記する.
             if (data != null)
             {
                 receive_txtbox.AppendText(data);
+                receive_txtbox.AppendText("unko");
+            }
+            else
+            {
+                receive_txtbox.AppendText("null");
             }
         }
 
@@ -221,7 +229,7 @@ namespace ArduinoSerialGUI
                 return;
             }
             // テキストボックスから、送信するテキストを取り出す.
-            String data = "j0x";
+            String data = "0";
 
             // 送信するテキストがない場合、データ送信は行わない.
             if (string.IsNullOrEmpty(data) == true)
@@ -231,7 +239,7 @@ namespace ArduinoSerialGUI
 
             try
             {
-                // シリアルポートからテキストを送信する.
+                // シリアルポートからテキストを送信する
                 serialPort1.Write(data);
 
                 // 送信データを入力するテキストボックスをクリアする.
