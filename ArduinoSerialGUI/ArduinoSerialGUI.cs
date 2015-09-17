@@ -177,7 +177,7 @@ namespace ArduinoSerialGUI
                 serialPort1.Write(data);
 
                 // 送信データを入力するテキストボックスをクリアする.
-                code_txtbox.Clear();
+                // code_txtbox.Clear();
             }
             catch (Exception ex)
             {
