@@ -213,11 +213,9 @@ namespace ArduinoSerialGUI
             if (data != null)
             {
                 receive_txtbox.AppendText(data);
-                receive_txtbox.AppendText("unko");
             }
             else
             {
-                receive_txtbox.AppendText("null");
             }
         }
 
@@ -229,7 +227,7 @@ namespace ArduinoSerialGUI
                 return;
             }
             // テキストボックスから、送信するテキストを取り出す.
-            String data = "0";
+            String data = "j0000000000000000x";
 
             // 送信するテキストがない場合、データ送信は行わない.
             if (string.IsNullOrEmpty(data) == true)
@@ -370,6 +368,117 @@ namespace ArduinoSerialGUI
             else
             {
                 code_txtbox.Text += string.Format("0{0:D4}", data3_trkbar.Value);
+            }
+        }
+
+        private void data1_txtbox_TextChanged(object sender, EventArgs e)
+        {
+            data1_trkbar.Value = int.Parse(data1_txtbox.Text);
+
+            code_txtbox.Text = mode_cbbox.SelectedItem.ToString();
+            if (data1_trkbar.Value < 0)
+            {
+                code_txtbox.Text += string.Format("1{0:D4}", -data1_trkbar.Value);
+            }
+            else
+            {
+                code_txtbox.Text += string.Format("0{0:D4}", data1_trkbar.Value);
+            }
+            if (data2_trkbar.Value < 0)
+            {
+                code_txtbox.Text += string.Format("1{0:D4}", -data2_trkbar.Value);
+            }
+            else
+            {
+                code_txtbox.Text += string.Format("0{0:D4}", data2_trkbar.Value);
+            }
+            if (data3_trkbar.Value < 0)
+            {
+                code_txtbox.Text += string.Format("1{0:D4}", -data3_trkbar.Value);
+            }
+            else
+            {
+                code_txtbox.Text += string.Format("0{0:D4}", data3_trkbar.Value);
+            }
+        }
+
+        private void data2_txtbox_TextChanged(object sender, EventArgs e)
+        {
+            data2_trkbar.Value = int.Parse(data2_txtbox.Text);
+
+            code_txtbox.Text = mode_cbbox.SelectedItem.ToString();
+            if (data1_trkbar.Value < 0)
+            {
+                code_txtbox.Text += string.Format("1{0:D4}", -data1_trkbar.Value);
+            }
+            else
+            {
+                code_txtbox.Text += string.Format("0{0:D4}", data1_trkbar.Value);
+            }
+            if (data2_trkbar.Value < 0)
+            {
+                code_txtbox.Text += string.Format("1{0:D4}", -data2_trkbar.Value);
+            }
+            else
+            {
+                code_txtbox.Text += string.Format("0{0:D4}", data2_trkbar.Value);
+            }
+            if (data3_trkbar.Value < 0)
+            {
+                code_txtbox.Text += string.Format("1{0:D4}", -data3_trkbar.Value);
+            }
+            else
+            {
+                code_txtbox.Text += string.Format("0{0:D4}", data3_trkbar.Value);
+            }
+        }
+
+        private void data3_txtbox_TextChanged(object sender, EventArgs e)
+        {
+            data3_trkbar.Value = int.Parse(data3_txtbox.Text);
+
+            code_txtbox.Text = mode_cbbox.SelectedItem.ToString();
+            if (data1_trkbar.Value < 0)
+            {
+                code_txtbox.Text += string.Format("1{0:D4}", -data1_trkbar.Value);
+            }
+            else
+            {
+                code_txtbox.Text += string.Format("0{0:D4}", data1_trkbar.Value);
+            }
+            if (data2_trkbar.Value < 0)
+            {
+                code_txtbox.Text += string.Format("1{0:D4}", -data2_trkbar.Value);
+            }
+            else
+            {
+                code_txtbox.Text += string.Format("0{0:D4}", data2_trkbar.Value);
+            }
+            if (data3_trkbar.Value < 0)
+            {
+                code_txtbox.Text += string.Format("1{0:D4}", -data3_trkbar.Value);
+            }
+            else
+            {
+                code_txtbox.Text += string.Format("0{0:D4}", data3_trkbar.Value);
+            }
+        }
+
+        private void renew_btn_Click(object sender, EventArgs e)
+        {
+            //! 利用可能なシリアルポート名の配列を取得する.
+            string[] PortList = SerialPort.GetPortNames();
+
+            com_cbbox.Items.Clear();
+
+            //! シリアルポート名をコンボボックスにセットする.
+            foreach (string PortName in PortList)
+            {
+                com_cbbox.Items.Add(PortName);
+            }
+            if (com_cbbox.Items.Count > 0)
+            {
+                com_cbbox.SelectedIndex = 0;
             }
         }
 
