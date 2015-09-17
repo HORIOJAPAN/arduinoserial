@@ -373,7 +373,23 @@ namespace ArduinoSerialGUI
 
         private void data1_txtbox_TextChanged(object sender, EventArgs e)
         {
-            data1_trkbar.Value = int.Parse(data1_txtbox.Text);
+            int val;
+            try
+            {
+                val = int.Parse(data1_txtbox.Text);
+            }
+            catch(FormatException)
+            {
+                return;
+            }
+            
+
+            if ( val < -2000 || val > 2000)
+            {
+                return;
+            }
+
+            data1_trkbar.Value = val;
 
             code_txtbox.Text = mode_cbbox.SelectedItem.ToString();
             if (data1_trkbar.Value < 0)
@@ -404,7 +420,22 @@ namespace ArduinoSerialGUI
 
         private void data2_txtbox_TextChanged(object sender, EventArgs e)
         {
-            data2_trkbar.Value = int.Parse(data2_txtbox.Text);
+            int val;
+            try
+            {
+                val = int.Parse(data2_txtbox.Text);
+            }
+            catch (FormatException)
+            {
+                return;
+            }
+
+            if (val < -2000 || val > 2000)
+            {
+                return;
+            }
+
+            data2_trkbar.Value = val;
 
             code_txtbox.Text = mode_cbbox.SelectedItem.ToString();
             if (data1_trkbar.Value < 0)
@@ -435,7 +466,22 @@ namespace ArduinoSerialGUI
 
         private void data3_txtbox_TextChanged(object sender, EventArgs e)
         {
-            data3_trkbar.Value = int.Parse(data3_txtbox.Text);
+            int val;
+            try
+            {
+                val = int.Parse(data3_txtbox.Text);
+            }
+            catch (FormatException)
+            {
+                return;
+            }            
+
+            if (val < 0 || val > 9999)
+            {
+                return;
+            }
+
+            data3_trkbar.Value = val;
 
             code_txtbox.Text = mode_cbbox.SelectedItem.ToString();
             if (data1_trkbar.Value < 0)
